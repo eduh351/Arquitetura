@@ -19,8 +19,6 @@ class Fabrica(Thread):
         global vitrine
 
         while True:
-
-            #peca = random.choice(pecas)
             pecaItem = random.choice(pecas)
 
             condition.acquire()
@@ -33,7 +31,6 @@ class Fabrica(Thread):
 
             condition.release()
 
-            #time.sleep(random.random())
             time.sleep(3)
 
 class Loja(Thread):
@@ -57,7 +54,6 @@ class Loja(Thread):
 
             condition.release()
 
-            #time.sleep(random.random())
             time.sleep(3)
 Fabrica().start()
 
